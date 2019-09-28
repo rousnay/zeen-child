@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/wwwgenui/public_html/keddiescottass/wp-content/themes/zeen-child
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp functions.php $DEPLOYPATH
+    - /bin/cp screenshot.png $DEPLOYPATH
