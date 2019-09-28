@@ -5,3 +5,4 @@ deployment:
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp functions.php $DEPLOYPATH
     - /bin/cp screenshot.png $DEPLOYPATH
+    - /bin/cp test.txt $DEPLOYPATH
