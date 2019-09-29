@@ -27,9 +27,33 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 		<h3>Entrance block (Under development)</h3>
 		<div class="stage">
 			<h3>Stage</h3>
+			<?php query_posts('tag="stage"&posts_per_page=2'); ?>
+
+			<?php while (have_posts()) : the_post(); 
+				$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); 
+				?>
+
+				<img src="<?php echo $feat_image;  ?>" alt="">
+
+
+			<?php endwhile; ?>
+
+			<?wp_reset_query(); ?>
+
 		</div>
 		<div class="screen">
 			<h3>Screen</h3>
+			<?php query_posts('tag="screen"&posts_per_page=2'); ?>
+
+			<?php while (have_posts()) : the_post(); 
+				$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); 
+				?>
+
+				<img src="<?php echo $feat_image;  ?>" alt="">
+				
+			<?php endwhile; ?>
+
+			<?wp_reset_query(); ?>
 		</div>
 
 		
@@ -43,8 +67,8 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 		?>
 		<div id="contents-wrap" class="single-content contents-wrap <?php if ( empty( $builder ) ) { echo 'tipi-row content-bg '; } ?>article-layout-<?php echo intval( $layout ); ?> clearfix">
 			<?php if ( empty( $builder ) ) { ?>
-			<div class="tipi-cols clearfix">
-			<?php } ?>
+				<div class="tipi-cols clearfix">
+				<?php } ?>
 				<?php
 				if ( empty( $builder_call ) ) {
 					while ( have_posts() ) :
@@ -59,8 +83,8 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 				}
 				?>
 				<?php do_action( 'zeen_end_contents_wrap' ); ?>
-			<?php if ( empty( $builder ) ) { ?>
-			</div><!-- .tipi-cols -->
+				<?php if ( empty( $builder ) ) { ?>
+				</div><!-- .tipi-cols -->
 			<?php } ?>
 		</div><!-- .tipi-row -->
 	</div><!-- .post-wrap -->
