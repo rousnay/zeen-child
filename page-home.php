@@ -28,35 +28,32 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 		<div class="stage">
 			<h3>Stage</h3>
 			<?php query_posts('tag="stage"&posts_per_page=2'); ?>
-
 			<?php while (have_posts()) : the_post(); 
-				$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); 
+				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'entrance-block-thumb');
+				$url = $thumb[0];
 				?>
 
-				<img src="<?php echo $feat_image;  ?>" alt="">
+				<img src="<?php echo $url; ?>" alt="">
 
 
 			<?php endwhile; ?>
-
 			<?wp_reset_query(); ?>
 
 		</div>
 		<div class="screen">
 			<h3>Screen</h3>
 			<?php query_posts('tag="screen"&posts_per_page=2'); ?>
-
 			<?php while (have_posts()) : the_post(); 
-				$feat_image = wp_get_attachment_url(get_post_thumbnail_id($post->ID)); 
+				$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'entrance-block-thumb');
+				$url = $thumb[0];
 				?>
 
-				<img src="<?php echo $feat_image;  ?>" alt="">
-				
-			<?php endwhile; ?>
+				<img src="<?php echo $url; ?>" alt="">
 
+			<?php endwhile; ?>
 			<?wp_reset_query(); ?>
 		</div>
 
-		
 	</div>
 
 	<div id="page-wrap" <?php post_class( $post_wrap_class ); ?>>
