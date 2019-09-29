@@ -5,3 +5,36 @@
 * Template: zeen
 * Version: 2.3.1
 */
+
+
+#site-entrance{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    margin: 30px auto;
+}
+
+#site-entrance h3{
+	flex: 1 0 100%;
+    align-self: center;
+}
+
+div#site-entrance > div {
+    flex: 1 1 50%;
+    margin-top: 30px;
+}
+div#site-entrance > div h3{
+	color: #fff;
+}
+.stage{
+	background-color: #e4853d;
+	border: 1px solid #2c0a63;
+}
+
+.screen{
+	background-color: #2c0a63;
+	border: 1px solid #e4853d;
+}
+
+

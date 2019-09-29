@@ -24,7 +24,13 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 <div id="primary" class="content-area">
 
 	<div id="site-entrance">
-		<h1>Entrance block (Under development)</h1>
+		<h3>Entrance block (Under development)</h3>
+		<div class="stage">
+			<h3>Stage</h3>
+		</div>
+		<div class="screen">
+			<h3>Screen</h3>
+		</div>
 
 		
 	</div>
