@@ -16,3 +16,4 @@ add_action(  'wp_enqueue_scripts', 'zeen_child_enqueue_styles' );
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'entrance-block-thumb', 1000, 600, true );
+	add_image_size( 'entrance-block-thumb-bg', 900, 900, true );
