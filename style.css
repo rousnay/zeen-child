@@ -22,7 +22,7 @@ header .secondary-wrap li.menu-icon-fb {
 }
 body .secondary-wrap a,
 body .site-mob-header a{
-    color: #f00;
+    color: #fff;
 }
 .logo-main-wrap.logo-mob-wrap .logo img {
     max-width: 200px;
@@ -31,7 +31,7 @@ body .site-mob-header a{
 .site-mob-header .tipi-i-menu-mob:after, 
 .site-mob-header .tipi-i-menu-mob:before, 
 .site-mob-header .tipi-i-menu-mob{
-    background: #f00;
+    background: #fff;
 }
 .grid-image-1 .mask-overlay {
     background-color: #be1924;
@@ -85,6 +85,7 @@ body.page-template-page-home .site-inner {
 }
 #site-entrance{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
     height: 100vh;
@@ -167,18 +168,18 @@ div#site-entrance > div h3{
     background: rgba(190, 25, 36, 0.7);
 }
 .block-name{
-    background: transparent;
-    flex: 0 0 100px;
+    background: #f00;
+    flex: 0 0 90px;
     z-index: 5;
-    padding: 15px;
-    color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 13px;
+    color: #fff;
     text-transform: uppercase;
     border: 1px solid #fff;
-    opacity: 0;
     transition: all .55s ease-out;
 }
 .block-overlay:hover .block-name{
-	opacity: 1;
     background: #fff;
     color: #be1924;
     border: 1px solid #fff;
@@ -189,15 +190,36 @@ body.page-template-page-home .site-footer {
     z-index: 6;
     bottom: 0;
 }
-body.page-template-page-home .footer-lower-area {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 
 /*ALL OTHER PAGES*/
 
 
 /*MEDIA QUERIES*/
+@media only screen and (max-width: 767px){
+    .site-footer .tipi-xs-flex-full {
+        display: flex;
+    }
+    .site-footer .tipi-xs-flex-full>* {
+        margin-top: 0;
+    }
+}
+@media only screen and (min-width: 768px){
+    #site-entrance {
+        flex-direction: row;
+    }
+    .block-name{
+        font-size: 18px;
+        padding: 15px;
+        flex-basis: 100px;
+        background: transparent;
+        color: transparent;
+        opacity: 0;
+        transition: all .55s ease-out;
+    }
+    .block-overlay:hover .block-name{
+        opacity: 1;
+    }
+}
 @media only screen and (min-width: 1020px){
     .block-title, .page-title {
         font-size: 32px;
