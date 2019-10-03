@@ -26,6 +26,7 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 	<div id="site-entrance">
 		<div class="stage">
 			<a class="cycler entrance-link" href="<?php echo bloginfo('url');?>/tag/stage/">
+				<div class="block-overlay"><div class="block-name">Stage</div></div>
 				<img class="entrance-placeholder" src="<?php echo get_stylesheet_directory_uri(); ?>/images/entrance-placeholder-image.jpg" alt="" width="" height="" />
 				<?php query_posts('tag="stage"&posts_per_page=4'); ?>
 				<?php while (have_posts()) : the_post(); 
@@ -40,7 +41,8 @@ $post_wrap_class = zeen_post_wrap_class( $post->ID, $args, array( 'page-wrap' ) 
 			</a>
 		</div>
 		<div class="screen">
-			<a class="cycler entrance-link" href="<?php echo bloginfo('url');?>/tag/screen/">	
+			<a class="cycler entrance-link" href="<?php echo bloginfo('url');?>/tag/screen/">
+				<div class="block-overlay"><div class="block-name">Screen</div></div>	
 				<img class="entrance-placeholder" src="<?php echo get_stylesheet_directory_uri(); ?>/images/entrance-placeholder-image.jpg" alt="" width="" height="" />
 				<?php query_posts('tag="screen"&posts_per_page=4'); ?>
 				<?php while (have_posts()) : the_post(); 
