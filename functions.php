@@ -23,6 +23,6 @@ add_image_size( 'entrance-block-thumb-bg', 900, 900, true );
  */
 
 function ksa_custom_scripts() {
-    wp_enqueue_script( 'ksa-custom-js', get_stylesheet_directory_uri() . '/js/ksa-custom.js', array( 'jquery' ),'',true );
+    wp_enqueue_script( 'ksa-custom-js', get_stylesheet_directory_uri() . '/assets/ksa-custom.js', array( 'jquery' ),'',true );
 }
 add_action( 'wp_enqueue_scripts', 'ksa_custom_scripts' );
