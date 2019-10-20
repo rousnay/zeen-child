@@ -225,6 +225,17 @@ body.page-template-page-home .site-footer {
     bottom: 0;
 }
 
+div#modal.modal-wrap {
+    display: none!important;
+}
+
+.meta-wrap.hero-meta {
+    display: none!important;
+}
+.ksa-post-title {
+    padding: 2em 0 3em;
+    text-align: center;
+}
 
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 419px){
