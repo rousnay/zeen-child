@@ -23,4 +23,7 @@ function cycleImages(){
 jQuery(document).ready(function(){
 // run every 4s
 setInterval('cycleImages()', 4000);
+
+var getTag = jQuery('.post-tags a').text();
+var settag = jQuery('span.read-time').text(getTag);
 });
