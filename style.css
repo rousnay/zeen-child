@@ -100,6 +100,7 @@ header .secondary-wrap li.menu-icon-fb {
 body.page-template-page-home div#content {
     position: absolute;
     top: 0;
+    width: 100%!important;
 }
 body.page-template-page-home div#page {
     position: relative;
