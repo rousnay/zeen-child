@@ -225,7 +225,9 @@ body.page-template-page-home .site-footer {
     z-index: 6;
     bottom: 0;
 }
-
+body.modal-active {
+    overflow: auto;
+}
 div#modal.modal-wrap {
     display: none!important;
 }
